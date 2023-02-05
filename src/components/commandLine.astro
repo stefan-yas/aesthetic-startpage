@@ -1,0 +1,121 @@
+---
+const name = "stefanyas";
+---
+
+<section>
+  <p>{name}@<span id="browser-info"></span> |</p>
+  <input id="terminal-input" type="text" />
+</section>
+<style>
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  p {
+    font-family: var(--monospace-font-family);
+    font-size: 20px;
+  }
+
+  #browser-info {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  #terminal-input {
+    background: none;
+    border: none;
+    font-family: var(--monospace-font-family);
+    font-size: 20px;
+    color: var(--text-color);
+  }
+</style>
+
+<p id="browser-info"></p>
+
+<script>
+  const p = document.getElementById("browser-info");
+  const userAgent = navigator.userAgent;
+  let browser = "unknown";
+
+  if (userAgent.indexOf("Chrome") !== -1) {
+    browser = "chrome";
+  } else if (userAgent.indexOf("Firefox") !== -1) {
+    browser = "firefox";
+  }
+
+  p.textContent = browser;
+
+  const input = document.getElementById("terminal-input");
+  const examples = [
+    "how to tie a tie",
+    "today's weather",
+    "is it halloween yet",
+  ];
+  const randomIndex = Math.floor(Math.random() * examples.length);
+  input.placeholder = examples[randomIndex];
+
+  input.focus();
+
+  input.addEventListener("input", function () {
+    let value = input.value.toLowerCase();
+    let elements = document.querySelectorAll("a");
+    for (let i = 0; i < elements.length; i++) {
+      let element = elements[i];
+      if (value === "") {
+        element.style.mixBlendMode = "";
+      } else if (
+        element.textContent
+          .toLowerCase()
+          .indexOf(value.replace(/^r:|^s:/, "")) !== -1
+      ) {
+        element.style.mixBlendMode = "";
+      } else {
+        element.style.mixBlendMode = "color-burn";
+      }
+    }
+  });
+
+  input.addEventListener("keydown", function (event) {
+    let value = input.value.toLowerCase();
+    let elements = document.querySelectorAll("a");
+    let matchFound = false;
+    if (event.ctrlKey && event.key === "c") {
+      input.value = "";
+      for (let i = 0; i < elements.length; i++) {
+        let element = elements[i];
+        element.style.mixBlendMode = "";
+      }
+    }
+    for (let i = 0; i < elements.length; i++) {
+      let element = elements[i];
+      if (value === "" || event.keyCode !== 13) {
+        continue;
+      }
+      if (
+        element.textContent
+          .toLowerCase()
+          .indexOf(value.replace(/^r:|^s:/, "")) !== -1
+      ) {
+        window.location.href = element.href;
+        matchFound = true;
+        break;
+      }
+    }
+    if (!matchFound && event.keyCode === 13) {
+      if (value.startsWith("r:")) {
+        window.location.href =
+          "https://google.com/search?q=site:reddit.com " +
+          value.replace("r:", "");
+      } else if (value.startsWith("s:")) {
+        window.location.href =
+          "https://google.com/search?q=site:stackoverflow.com " +
+          value.replace("s:", "");
+      } else {
+        window.location.href = "https://google.com/search?q=" + value;
+      }
+    }
+  });
+</script>

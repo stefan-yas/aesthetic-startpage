@@ -1,0 +1,79 @@
+---
+const cards = await Astro.glob("../content/*.md");
+---
+
+{
+  cards.map((card) => (
+    <section>
+      <h2>{card.frontmatter.title}</h2>
+      <ul>
+        {card.frontmatter.links.map((link) => (
+          <li>
+            <a href={link.href} target="_blank">
+              <img class="svg-icon" src={link.src} alt={link.alt} />
+              {link.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))
+}
+
+<style>
+  section {
+    background-color: var(--card-background-color);
+    border-radius: var(--border-radius);
+    width: 170px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    height: fit-content;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  ul li {
+    font-size: 20px;
+  }
+
+  ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  ul li a:visited {
+    color: var(--text-color);
+  }
+
+  ul li a img {
+    max-width: 24px;
+    max-height: 24px;
+  }
+
+  .svg-icon {
+    filter: invert(0%);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .svg-icon {
+      filter: invert(100%);
+    }
+  }
+</style>

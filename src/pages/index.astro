@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/card.astro";
+import CommandLine from "../components/commandLine.astro";
+---
+
+<Layout title="Welcome to your startpage.">
+  <div class="content">
+    <div class="cards"><Card /></div>
+    <CommandLine />
+  </div>
+</Layout>
+
+<style>
+  .cards {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    width: 1200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 160px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .content {
+      margin-top: 2em;
+      gap: 100px;
+    }
+    .cards {
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      width: auto;
+    }
+  }
+</style>
+
+<script></script>
