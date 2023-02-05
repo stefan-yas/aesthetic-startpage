@@ -2,6 +2,8 @@
 
 A beatiful terminal-based startpage for your browser, built with Astro and Markdown.
 
+![capture](https://github.com/stefan-yas/aesthetic-startpage/blob/main/public/capture.png)
+
 ## Install
 
 ```
