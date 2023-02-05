@@ -29,3 +29,5 @@ All commands are run from the root of the project, from a terminal:
 ## To-do
 
 - Fix minor dark-mode issues 🌑
+- Standardize icons 🌑
+- Optimize terminal UX 🌑
