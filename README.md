@@ -2,7 +2,7 @@
 
 A beatiful terminal-based startpage for your browser, built with Astro and Markdown.
 
-![capture](https://github.com/stefan-yas/aesthetic-startpage/blob/main/public/capture.png)
+![render.gif](https://github.com/stefan-yas/aesthetic-startpage/blob/main/public/render.gif)
 
 ## Install
 
@@ -17,8 +17,6 @@ Once you've installed the project dependencies and started the dev server, go in
 
 ## Usage
 
-All commands are run from the root of the project, from a terminal:
-
 | Command                     | Action                  |
 | :-------------------------- | :---------------------- |
 | `ctrl + C`                  | Clears the terminal     |
@@ -29,6 +27,6 @@ All commands are run from the root of the project, from a terminal:
 ## To-do
 
 - Fix minor dark-mode issues 🌑
-- Standardize icons 🌑
-- Optimize terminal UX 🌑
-- Add more example terminal commands 🌑
+- ~~Standardize icons~~ 🌕
+- Optimize terminal UX 🌒
+- Add more example terminal commands 🌒

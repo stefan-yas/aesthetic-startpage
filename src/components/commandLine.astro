@@ -30,6 +30,22 @@ const name = "stefanyas";
     font-family: var(--monospace-font-family);
     font-size: 20px;
     color: var(--text-color);
+    width: 750px;
+  }
+
+  #terminal-input:focus {
+    border: none;
+    outline: none;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    #terminal-input {
+      width: 300px;
+    }
   }
 </style>
 
@@ -53,6 +69,17 @@ const name = "stefanyas";
     "how to tie a tie",
     "today's weather",
     "is it halloween yet",
+    "what's my age again",
+    "make the terminal great again",
+    "we'll make our terminal... with blackjack and hookers!",
+    "hey sexy! wanna kill all humans?",
+    "another pointless day where I accomplish nothing",
+    "did everything just taste purple for a second?",
+    "at the risk of sounding positive, you can do this!",
+    "you look good today!",
+    "press ctrl+c to clear the terminal",
+    "you can search reddit by starting your search with r:",
+    "you can search stack overflow by starting your search with s:",
   ];
   const randomIndex = Math.floor(Math.random() * examples.length);
   input.placeholder = examples[randomIndex];
