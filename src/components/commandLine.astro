@@ -141,7 +141,12 @@ const name = "stefanyas";
           "https://google.com/search?q=site:stackoverflow.com " +
           value.replace("s:", "");
       } else {
-        window.location.href = "https://google.com/search?q=" + value;
+        let words = value.split(".");
+        if (words.length === 2 || words.length === 3) {
+          window.location.href = "http://" + value;
+        } else {
+          window.location.href = "https://google.com/search?q=" + value;
+        }
       }
     }
   });
