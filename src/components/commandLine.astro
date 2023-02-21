@@ -221,6 +221,7 @@ const name = "stefanyas";
   input.addEventListener("keydown", function (event) {
     let value = input.value.toLowerCase();
     let elements = document.querySelectorAll("a");
+    
     let matchFound = false;
     if (event.ctrlKey && event.key === "c") {
       input.value = "";
@@ -263,6 +264,25 @@ const name = "stefanyas";
         } else {
           window.location.href = "https://google.com/search?q=" + value;
         }
+      }
+    }
+  });
+
+  input.addEventListener("input", function () {
+    let value = input.value.toLowerCase();
+    let elements = document.querySelectorAll("a");
+    for (let i = 0; i < elements.length; i++) {
+      let element = elements[i];
+      if (value === "") {
+        element.style.mixBlendMode = "";
+      } else if (
+        element.textContent
+          .toLowerCase()
+          .indexOf(value.replace(/^r:|^s:/, "")) !== -1
+      ) {
+        element.style.mixBlendMode = "";
+      } else {
+        element.style.mixBlendMode = "color-burn";
       }
     }
   });
