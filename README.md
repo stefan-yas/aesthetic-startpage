@@ -26,7 +26,7 @@ Once you've customized your startpage, you'll likely want to use it as your new 
 | `ctrl + C`                  | Clears the terminal     |
 | `s:`                        | Searches Stack Overflow |
 | `r:`                        | Searches Reddit         |
-| `help`                      | help menu               |
+| `help`                      | Help menu               |
 | Typed links                 | Open in the same tab    |
 | Anything that isn't a match | Searches Google         |
 
