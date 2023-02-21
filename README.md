@@ -22,6 +22,7 @@ Once you've installed the project dependencies and started the dev server, go in
 | `ctrl + C`                  | Clears the terminal     |
 | `s:`                        | Searches Stack Overflow |
 | `r:`                        | Searches Reddit         |
+| `help`                      | help menu               |
 | Typed links                 | Open in the same tab    |
 | Anything that isn't a match | Searches Google         |
 
@@ -29,5 +30,5 @@ Once you've installed the project dependencies and started the dev server, go in
 
 - ~~Fix minor dark-mode issues~~ 🌕
 - ~~Standardize icons~~ 🌕
-- Optimize terminal UX 🌓
-- Add more example terminal commands 🌓
+- ~~Optimize terminal UX~~ 🌕
+- ~~Add more example terminal commands~~ 🌕
