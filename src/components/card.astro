@@ -9,7 +9,7 @@ const cards = await Astro.glob("../content/*.md");
       <ul>
         {card.frontmatter.links.map((link) => (
           <li>
-            <a href={link.href} target="_blank">
+            <a href={link.href}>
               <img class="svg-icon" src={link.src} alt={link.alt} />
               {link.title}
             </a>
