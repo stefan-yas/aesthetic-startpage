@@ -165,6 +165,12 @@ const name = "stefanyas";
     const input = document.getElementById("terminal-input");
     input.value = "";
     input.focus();
+
+    const elements = document.querySelectorAll("a");
+    for (let i = 0; i < elements.length; i++) {
+      let element = elements[i];
+      element.style.mixBlendMode = "";
+    }
   }
 
   document.addEventListener("keydown", function (event) {
