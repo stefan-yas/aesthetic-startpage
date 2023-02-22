@@ -17,7 +17,7 @@ Once you've installed the project dependencies and started the dev server, go in
 
 ## Install
 
-Once you've customized your startpage, you'll likely want to use it as your new tab in your browser of choice. You can do this by hosting your startpage somewhere and pointing your new tab to that URL. I use [New Tab Redirect](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna) for displaying the start page when I open a new tab. [Vercel](vercel.com) for hosting.
+Once you've customized your startpage, you'll likely want to use it as your new tab in your browser of choice. You can do this by hosting your startpage somewhere and pointing your new tab to that URL. I use [New Tab Redirect](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna) for displaying the start page when I open a new tab. [Vercel](https://vercel.com) for hosting.
 
 ## Usage
 
